@@ -1,5 +1,11 @@
+# Ignore all .DS_Store files
 .DS_Store
 memos-study-money/**/*.DS_Store
 memos-study-baseline/**/*.DS_Store
 memos-study-do-better/**/*.DS_Store
 memos-study-memory/**/*.DS_Store
+# Ignore all data files
+memos-study-money/data/*
+memos-study-baseline/data/*
+memos-study-do-better/data/*
+memos-study-memory/data/*
