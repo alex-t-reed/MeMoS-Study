@@ -38,7 +38,7 @@ There is a "Code" routine in each experiment that I have added a "mode" variable
 
 Each experiment can be commenced with the green play button near the top of the experiment. Then you will be prompted to enter participant info such as ID and session, then hit OK and the experiment will begin. See below for example in the Baseline task:
 
-<img src="https://github.com/alex-t-reed/MeMoS-Study/blob/main/MeMoS_Baseline_Taskbar.png" width="100" alt="Image of Baseline Taskbar">
+<img src="https://github.com/alex-t-reed/MeMoS-Study/blob/main/MeMoS_Baseline_Taskbar.png" width="600" alt="Image of Baseline Taskbar">
 
 ## Video Compression
 
