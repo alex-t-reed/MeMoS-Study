@@ -1,9 +1,9 @@
 # Ignore all .DS_Store files
 .DS_Store
-memos-study-money/**/*.DS_Store
-memos-study-baseline/**/*.DS_Store
-memos-study-do-better/**/*.DS_Store
-memos-study-memory/**/*.DS_Store
+memos-study-money/.DS_Store
+memos-study-baseline/.DS_Store
+memos-study-do-better/.DS_Store
+memos-study-memory/.DS_Store
 # Ignore all data files - so that the data doesn't upload when repo is updated
 memos-study-money/data/*
 memos-study-baseline/data/*
