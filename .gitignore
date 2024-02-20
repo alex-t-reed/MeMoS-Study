@@ -6,9 +6,3 @@ memos-study-money/data/*
 memos-study-baseline/data/*
 memos-study-do-better/data/*
 memos-study-memory/data/*
-
-# Ignore .DS_Store files in resources directories
-memos-study-baseline/resources/.DS_Store
-memos-study-do-better/resources/.DS_Store
-memos-study-memory/resources/.DS_Store
-memos-study-money/resources/.DS_Store
