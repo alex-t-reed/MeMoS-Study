@@ -132,8 +132,8 @@
       <CodeComponent name="code">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="# Task by Sara Leslie, 2023&amp;#10;# Repurposed for MeMoS Study by Alex Reed, 2023&amp;#10;&amp;#10;import random  # Import the random module&amp;#10;&amp;#10;mode = 'actual'&amp;#10;&amp;#10;if mode == 'testing':&amp;#10;    # Define necessary variables for testing block&amp;#10;    num_study = 3&amp;#10;    pics_per_block = 6&amp;#10;    old_per_cond = 1&amp;#10;    new_per_cond = 1&amp;#10;    num_test = old_per_cond + new_per_cond&amp;#10;    num_items = pics_per_block&amp;#10;    num_blocks = 2&amp;#10;elif mode == 'actual':&amp;#10;    # Define necessary variables for actual block&amp;#10;    num_study = 27&amp;#10;    pics_per_block = 54&amp;#10;    old_per_cond = 9&amp;#10;    new_per_cond = 9&amp;#10;    num_test = old_per_cond + new_per_cond&amp;#10;    num_items = pics_per_block&amp;#10;    num_blocks = 6&amp;#10;&amp;#10;# Initialize variables&amp;#10;blockn = 0&amp;#10;blocknumber = 1&amp;#10;blocknumber_alt = 1&amp;#10;reward_number = 0&amp;#10;themecounter = 0&amp;#10;condorder_counter = 0&amp;#10;condorder_now = []&amp;#10;trialpay = 0&amp;#10;totaltrialnum = 1&amp;#10;&amp;#10;# Define the permutations of conditions for the blocks&amp;#10;cond_perm = [[0, 1, 2], [1, 0, 2], [2, 0, 1],&amp;#10;             [0, 2, 1], [1, 2, 0], [2, 1, 0],&amp;#10;             [0, 1, 2], [1, 0, 2], [2, 0, 1],&amp;#10;             [0, 2, 1], [1, 2, 0], [2, 1, 0]]&amp;#10;&amp;#10;# Shuffle the permutation list using the random module&amp;#10;random.shuffle(cond_perm)&amp;#10;&amp;#10;# Define face sets for each category&amp;#10;faceset1 = [&quot;resources/faceset19/faceset19_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset2 = [&quot;resources/faceset20/faceset20_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset3 = [&quot;resources/faceset21/faceset21_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset4 = [&quot;resources/faceset22/faceset22_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset5 = [&quot;resources/faceset23/faceset23_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset6 = [&quot;resources/faceset24/faceset24_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;&amp;#10;# Shuffle each face set using the random module&amp;#10;random.shuffle(faceset1)&amp;#10;random.shuffle(faceset2)&amp;#10;random.shuffle(faceset3)&amp;#10;random.shuffle(faceset4)&amp;#10;random.shuffle(faceset5)&amp;#10;random.shuffle(faceset6)&amp;#10;&amp;#10;# Organize the face sets in an image array&amp;#10;imagearray = [&amp;#10;    faceset1,&amp;#10;    faceset2,&amp;#10;    faceset3,&amp;#10;    faceset4,&amp;#10;    faceset5,&amp;#10;    faceset6&amp;#10;]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;var blockn, blocknumber, blocknumber_alt, cond_perm, condorder_counter, condorder_now, faceset1, faceset2, faceset3, faceset4, faceset5, faceset6, imagearray, mode, new_per_cond, num_blocks, num_items, num_study, num_test, old_per_cond, pics_per_block, reward_number, themecounter, totaltrialnum, trialpay;&amp;#10;mode = &quot;actual&quot;;&amp;#10;if ((mode === &quot;testing&quot;)) {&amp;#10;    num_study = 3;&amp;#10;    pics_per_block = 6;&amp;#10;    old_per_cond = 1;&amp;#10;    new_per_cond = 1;&amp;#10;    num_test = (old_per_cond + new_per_cond);&amp;#10;    num_items = pics_per_block;&amp;#10;    num_blocks = 2;&amp;#10;} else {&amp;#10;    if ((mode === &quot;actual&quot;)) {&amp;#10;        num_study = 27;&amp;#10;        pics_per_block = 54;&amp;#10;        old_per_cond = 9;&amp;#10;        new_per_cond = 9;&amp;#10;        num_test = (old_per_cond + new_per_cond);&amp;#10;        num_items = pics_per_block;&amp;#10;        num_blocks = 6;&amp;#10;    }&amp;#10;}&amp;#10;blockn = 0;&amp;#10;blocknumber = 1;&amp;#10;blocknumber_alt = 1;&amp;#10;reward_number = 0;&amp;#10;themecounter = 0;&amp;#10;condorder_counter = 0;&amp;#10;condorder_now = [];&amp;#10;trialpay = 0;&amp;#10;totaltrialnum = 1;&amp;#10;cond_perm = [[0, 1, 2], [1, 0, 2], [2, 0, 1], [0, 2, 1], [1, 2, 0], [2, 1, 0], [0, 1, 2], [1, 0, 2], [2, 0, 1], [0, 2, 1], [1, 2, 0], [2, 1, 0]];&amp;#10;random.shuffle(cond_perm);&amp;#10;faceset1 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset19/faceset19_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset2 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset20/faceset20_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset3 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset21/faceset21_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset4 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset22/faceset22_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset5 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset23/faceset23_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset6 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset24/faceset24_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;random.shuffle(faceset1);&amp;#10;random.shuffle(faceset2);&amp;#10;random.shuffle(faceset3);&amp;#10;random.shuffle(faceset4);&amp;#10;random.shuffle(faceset5);&amp;#10;random.shuffle(faceset6);&amp;#10;imagearray = [faceset1, faceset2, faceset3, faceset4, faceset5, faceset6];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="# Task by Sara Leslie, 2023&amp;#10;# Repurposed for MeMoS Study by Alex Reed, 2023&amp;#10;&amp;#10;import random  # Import the random module&amp;#10;&amp;#10;mode = 'testing'&amp;#10;&amp;#10;if mode == 'testing':&amp;#10;    # Define necessary variables for testing block&amp;#10;    num_study = 3&amp;#10;    pics_per_block = 6&amp;#10;    old_per_cond = 1&amp;#10;    new_per_cond = 1&amp;#10;    num_test = old_per_cond + new_per_cond&amp;#10;    num_items = pics_per_block&amp;#10;    num_blocks = 2&amp;#10;elif mode == 'actual':&amp;#10;    # Define necessary variables for actual block&amp;#10;    num_study = 27&amp;#10;    pics_per_block = 54&amp;#10;    old_per_cond = 9&amp;#10;    new_per_cond = 9&amp;#10;    num_test = old_per_cond + new_per_cond&amp;#10;    num_items = pics_per_block&amp;#10;    num_blocks = 6&amp;#10;&amp;#10;# Initialize variables&amp;#10;blockn = 0&amp;#10;blocknumber = 1&amp;#10;blocknumber_alt = 1&amp;#10;reward_number = 0&amp;#10;themecounter = 0&amp;#10;condorder_counter = 0&amp;#10;condorder_now = []&amp;#10;trialpay = 0&amp;#10;totaltrialnum = 1&amp;#10;&amp;#10;# Define the permutations of conditions for the blocks&amp;#10;cond_perm = [[0, 1, 2], [1, 0, 2], [2, 0, 1],&amp;#10;             [0, 2, 1], [1, 2, 0], [2, 1, 0],&amp;#10;             [0, 1, 2], [1, 0, 2], [2, 0, 1],&amp;#10;             [0, 2, 1], [1, 2, 0], [2, 1, 0]]&amp;#10;&amp;#10;# Shuffle the permutation list using the random module&amp;#10;random.shuffle(cond_perm)&amp;#10;&amp;#10;# Define face sets for each category&amp;#10;faceset1 = [&quot;resources/faceset19/faceset19_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset2 = [&quot;resources/faceset20/faceset20_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset3 = [&quot;resources/faceset21/faceset21_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset4 = [&quot;resources/faceset22/faceset22_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset5 = [&quot;resources/faceset23/faceset23_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset6 = [&quot;resources/faceset24/faceset24_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;&amp;#10;# Shuffle each face set using the random module&amp;#10;random.shuffle(faceset1)&amp;#10;random.shuffle(faceset2)&amp;#10;random.shuffle(faceset3)&amp;#10;random.shuffle(faceset4)&amp;#10;random.shuffle(faceset5)&amp;#10;random.shuffle(faceset6)&amp;#10;&amp;#10;# Organize the face sets in an image array&amp;#10;imagearray = [&amp;#10;    faceset1,&amp;#10;    faceset2,&amp;#10;    faceset3,&amp;#10;    faceset4,&amp;#10;    faceset5,&amp;#10;    faceset6&amp;#10;]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;var blockn, blocknumber, blocknumber_alt, cond_perm, condorder_counter, condorder_now, faceset1, faceset2, faceset3, faceset4, faceset5, faceset6, imagearray, mode, new_per_cond, num_blocks, num_items, num_study, num_test, old_per_cond, pics_per_block, reward_number, themecounter, totaltrialnum, trialpay;&amp;#10;mode = &quot;testing&quot;;&amp;#10;if ((mode === &quot;testing&quot;)) {&amp;#10;    num_study = 3;&amp;#10;    pics_per_block = 6;&amp;#10;    old_per_cond = 1;&amp;#10;    new_per_cond = 1;&amp;#10;    num_test = (old_per_cond + new_per_cond);&amp;#10;    num_items = pics_per_block;&amp;#10;    num_blocks = 2;&amp;#10;} else {&amp;#10;    if ((mode === &quot;actual&quot;)) {&amp;#10;        num_study = 27;&amp;#10;        pics_per_block = 54;&amp;#10;        old_per_cond = 9;&amp;#10;        new_per_cond = 9;&amp;#10;        num_test = (old_per_cond + new_per_cond);&amp;#10;        num_items = pics_per_block;&amp;#10;        num_blocks = 6;&amp;#10;    }&amp;#10;}&amp;#10;blockn = 0;&amp;#10;blocknumber = 1;&amp;#10;blocknumber_alt = 1;&amp;#10;reward_number = 0;&amp;#10;themecounter = 0;&amp;#10;condorder_counter = 0;&amp;#10;condorder_now = [];&amp;#10;trialpay = 0;&amp;#10;totaltrialnum = 1;&amp;#10;cond_perm = [[0, 1, 2], [1, 0, 2], [2, 0, 1], [0, 2, 1], [1, 2, 0], [2, 1, 0], [0, 1, 2], [1, 0, 2], [2, 0, 1], [0, 2, 1], [1, 2, 0], [2, 1, 0]];&amp;#10;random.shuffle(cond_perm);&amp;#10;faceset1 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset19/faceset19_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset2 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset20/faceset20_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset3 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset21/faceset21_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset4 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset22/faceset22_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset5 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset23/faceset23_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset6 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset24/faceset24_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;random.shuffle(faceset1);&amp;#10;random.shuffle(faceset2);&amp;#10;random.shuffle(faceset3);&amp;#10;random.shuffle(faceset4);&amp;#10;random.shuffle(faceset5);&amp;#10;random.shuffle(faceset6);&amp;#10;imagearray = [faceset1, faceset2, faceset3, faceset4, faceset5, faceset6];&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="/*&amp;#10;&amp;#10;studyarray = [[None for _ in range(6)] for _ in range(12)]&amp;#10;testarray = [[None for _ in range(12)] for _ in range(12)]&amp;#10;i = 0&amp;#10;ss = []&amp;#10;ts = []&amp;#10;&amp;#10;for j in range(12):&amp;#10;i = j*2&amp;#10;for k in range(6):&amp;#10;studyarray[j][k] = stim_file[pics_per_block*i + k]&amp;#10;for k in range(12):&amp;#10;testarray[j][k] = stim_file[pics_per_block*i + k]&amp;#10;console.log(ss)&amp;#10;&amp;#10;console.log(studyarray)&amp;#10;console.log(testarray)&amp;#10;*/&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;studyarray = [[None for _ in range(6)] for _ in range(12)]&amp;#10;testarray = [[None for _ in range(12)] for _ in range(12)]&amp;#10;i = 0&amp;#10;ss = []&amp;#10;ts = []&amp;#10;&amp;#10;for j in range(12):&amp;#10;    i = j*2&amp;#10;    for k in range(6):&amp;#10;        studyarray[j][k] = stim_file[pics_per_block*i + k]&amp;#10;    for k in range(12):&amp;#10;        testarray[j][k] = stim_file[pics_per_block*i + k]&amp;#10;    console.log(ss)&amp;#10;&amp;#10;console.log(studyarray)&amp;#10;console.log(testarray)&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -1929,7 +1929,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
       <TextComponent name="OLD">
-        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="color" updates="set every frame" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -1941,7 +1941,7 @@
         <Param name="name" updates="None" val="OLD" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(-0.38, -0.28)" valType="list"/>
+        <Param name="pos" updates="constant" val="(-0.33, -0.28)" valType="list"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -1966,7 +1966,7 @@
         <Param name="name" updates="None" val="NEW" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0.38, -0.28)" valType="list"/>
+        <Param name="pos" updates="constant" val="(0.42, -0.28)" valType="list"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -1991,7 +1991,7 @@
         <Param name="name" updates="None" val="Old_Points_minus" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(-.49, -0.34)" valType="list"/>
+        <Param name="pos" updates="constant" val="(-.33, -0.34)" valType="list"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -1999,7 +1999,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$fa_loss" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$fa_loss_trial" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="num"/>
       </TextComponent>
@@ -2016,7 +2016,7 @@
         <Param name="name" updates="None" val="Points_add_Old" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(-.33, -0.34)" valType="list"/>
+        <Param name="pos" updates="constant" val="(-.33, -0.40)" valType="list"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -2024,7 +2024,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="or  +5  points" valType="str"/>
+        <Param name="text" updates="set every repeat" val="+5  points correct" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="num"/>
       </TextComponent>
@@ -2041,7 +2041,7 @@
         <Param name="name" updates="None" val="New_Points_minus" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0.26, -0.34)" valType="list"/>
+        <Param name="pos" updates="constant" val="(0.42, -0.34)" valType="list"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -2049,7 +2049,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$miss_loss" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$miss_loss_trial" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="num"/>
       </TextComponent>
@@ -2066,7 +2066,7 @@
         <Param name="name" updates="None" val="Points_Add_New" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0.42, -0.34)" valType="list"/>
+        <Param name="pos" updates="constant" val="(0.42, -0.40)" valType="list"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -2074,7 +2074,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="or  +5  points" valType="str"/>
+        <Param name="text" updates="constant" val="+5  points correct" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="num"/>
       </TextComponent>
@@ -2090,7 +2090,7 @@
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
@@ -3788,7 +3788,7 @@
         <Param name="No audio" updates="None" val="False" valType="bool"/>
         <Param name="backend" updates="None" val="moviepy" valType="str"/>
         <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="disabled" updates="None" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="loop" updates="None" val="False" valType="bool"/>
