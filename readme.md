@@ -28,7 +28,7 @@ For any part where the experimenter has to save input, the key to move forward i
 
 ## How to Use
 
-You must download [PsychoPy](https://www.psychopy.org/download.html) and use version 2021.2.3. Code blocks can be altered using Python or JavaScript.
+You must download [PsychoPy](https://www.psychopy.org/download.html| width=100) and use version 2021.2.3. Code blocks can be altered using Python or JavaScript.
 
 Each `.psyexp` experiment file in each folder contains a code block that allows you to switch between actual and testing mode. In testing mode, you can debug the experiment without viewing all the stimuli. See the image below (each task has this code block):
 
@@ -38,7 +38,7 @@ There is a "Code" routine in each experiment that I have added a "mode" variable
 
 Each experiment can be commenced with the green play button near the top of the experiment. Then you will be prompted to enter participant info such as ID and session, then hit OK and the experiment will begin. See below for example in the Baseline task:
 
-![Image of Baseline Task bar](https://github.com/alex-t-reed/MeMoS-Study/blob/main/MeMoS_Baseline_Taskbar.png)
+![Image of Baseline Task bar](https://github.com/alex-t-reed/MeMoS-Study/blob/main/MeMoS_Baseline_Taskbar.png| width=100)
 
 ## Video Compression
 
