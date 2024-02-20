@@ -13,7 +13,7 @@
     <Param name="HTML path" updates="None" val="" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
-    <Param name="Resources" updates="None" val="[]" valType="list"/>
+    <Param name="Resources" updates="None" val="['resources/videos/MeMoS Experiment Instructions_Baseline.mp4']" valType="list"/>
     <Param name="Save csv file" updates="None" val="False" valType="bool"/>
     <Param name="Save excel file" updates="None" val="False" valType="bool"/>
     <Param name="Save hdf5 file" updates="None" val="False" valType="bool"/>
@@ -25,7 +25,7 @@
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
     <Param name="Use version" updates="None" val="2021.2.3" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="[2560, 1440]" valType="list"/>
+    <Param name="Window size (pixels)" updates="None" val="[1800, 1169]" valType="list"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[-1,-1,-1]" valType="color"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
