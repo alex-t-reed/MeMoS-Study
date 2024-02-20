@@ -1,11 +1,14 @@
 # Ignore all .DS_Store files
-.DS_Store
-memos-study-money/.DS_Store
-memos-study-baseline/.DS_Store
-memos-study-do-better/.DS_Store
-memos-study-memory/.DS_Store
+**/.DS_Store
+
 # Ignore all data files - so that the data doesn't upload when repo is updated
 memos-study-money/data/*
 memos-study-baseline/data/*
 memos-study-do-better/data/*
 memos-study-memory/data/*
+
+# Ignore .DS_Store files in resources directories
+memos-study-baseline/resources/.DS_Store
+memos-study-do-better/resources/.DS_Store
+memos-study-memory/resources/.DS_Store
+memos-study-money/resources/.DS_Store
