@@ -28,11 +28,11 @@ For any part where the experimenter has to save input, the key to move forward i
 
 ## How to Use
 
-You must download [PsychoPy](https://www.psychopy.org/download.html| width=100) and use version 2021.2.3. Code blocks can be altered using Python or JavaScript.
+You must download [PsychoPy](https://www.psychopy.org/download.html| width=300) and use version 2021.2.3. Code blocks can be altered using Python or JavaScript.
 
 Each `.psyexp` experiment file in each folder contains a code block that allows you to switch between actual and testing mode. In testing mode, you can debug the experiment without viewing all the stimuli. See the image below (each task has this code block):
 
-<img src="https://github.com/alex-t-reed/MeMoS-Study/blob/main/Code_Routine.png" width="100" alt="Image of Code Routine">
+<img src="https://github.com/alex-t-reed/MeMoS-Study/blob/main/Code_Routine.png" width="300" alt="Image of Code Routine">
 
 There is a "Code" routine in each experiment that I have added a "mode" variable to that can be set to "actual" or "testing". Changing to a testing mode makes the experiment signficantly faster by reducing stimuli numbers and blocks. Why? To fix bugs and add in new features in a more timely manner.
 
