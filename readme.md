@@ -32,7 +32,7 @@ As of 2/20/24, the 'm' key no longer will be used to add in the score manually f
 
 You must download [PsychoPy](https://www.psychopy.org/download.html) and use version 2021.2.3. Code blocks can be altered using Python or JavaScript.
 
-Each `.psyexp` experiment file in each folder contains a code block that allows you to switch between actual and testing mode. In testing mode, you can debug the experiment without viewing all the stimuli. See the image below (each task has this code block):
+Each `.psyexp` experiment file in each folder contains a code block that allows you to switch between actual and testing mode. In testing mode, you can debug the experiment without viewing all the stimuli. The actual mode would be what you would want participants to actually see. See the image below (each task has this code block):
 
 <img src="https://github.com/alex-t-reed/MeMoS-Study/blob/main/Code_Routine.png" width="300" alt="Image of Code Routine">
 
