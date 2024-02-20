@@ -4789,49 +4789,41 @@
         <Param name="text" updates="constant" val="Please type your response here . . . " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </TextboxComponent>
-      <MouseComponent name="mouse_1">
-        <Param name="clickable" updates="constant" val="Clickable_1" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
-        <Param name="name" updates="None" val="mouse_1" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
-      <TextComponent name="Clickable_1">
+      <ButtonComponent name="commmitment_memory_button">
+        <Param name="anchor" updates="constant" val="center" valType="str"/>
+        <Param name="bold" updates="constant" val="True" valType="bool"/>
+        <Param name="borderColor" updates="constant" val="None" valType="color"/>
+        <Param name="borderWidth" updates="constant" val="0" valType="num"/>
+        <Param name="callback" updates="constant" val="" valType="extendedCode"/>
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="fillColor" updates="constant" val="darkgrey" valType="color"/>
         <Param name="font" updates="constant" val="Open Sans" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.04" valType="num"/>
-        <Param name="name" updates="None" val="Clickable_1" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="italic" updates="constant" val="False" valType="bool"/>
+        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
+        <Param name="name" updates="None" val="commmitment_memory_button" valType="code"/>
+        <Param name="oncePerClick" updates="constant" val="True" valType="bool"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0.3, -0.3)" valType="list"/>
+        <Param name="padding" updates="constant" val="" valType="num"/>
+        <Param name="pos" updates="constant" val="(0.6, -0.3)" valType="list"/>
+        <Param name="save" updates="None" val="every click" valType="str"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="" valType="list"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="When finished, click here to go to the next question. " valType="str"/>
+        <Param name="timeRelativeTo" updates="constant" val="button onset" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
-      </TextComponent>
+      </ButtonComponent>
     </Routine>
     <Routine name="Memory_or_Money__12_Pt">
       <TextComponent name="mem_or_money_q">
