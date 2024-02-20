@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.2.3),
-    on Tue Feb 20 01:55:56 2024
+    on Tue Feb 20 02:07:08 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -42,7 +42,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2021.2.3'
 expName = 'memos_do_better_task'  # from the Builder filename that created this script
-expInfo = {'participant': '', 'session': '001'}
+expInfo = {'participant': '', 'baseline_score': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -140,15 +140,6 @@ Continue_2 = visual.TextStim(win=win, name='Continue_2',
 
 # Initialize components for Routine "videoInstructions"
 videoInstructionsClock = core.Clock()
-movie = visual.MovieStim3(
-    win=win, name='movie',
-    noAudio = False,
-    filename='resources/videos/MeMoS Experiment 2 Instructions - Do Better.mp4',
-    ori=0.0, pos=(0, 0), opacity=None,
-    loop=False,
-    size=[1280,720],
-    depth=0.0,
-    )
 
 # Initialize components for Routine "Commitment_Do_Better_Response"
 Commitment_Do_Better_ResponseClock = core.Clock()
@@ -193,7 +184,7 @@ CodeClock = core.Clock()
 
 import random  # Import the random module
 
-mode = 'actual'
+mode = 'testing'
 
 if mode == 'testing':
     # Define necessary variables for testing block
@@ -1193,7 +1184,7 @@ routineTimer.reset()
 continueRoutine = True
 # update component parameters for each repeat
 # keep track of which components have finished
-videoInstructionsComponents = [movie]
+videoInstructionsComponents = []
 for thisComponent in videoInstructionsComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1216,15 +1207,6 @@ while continueRoutine:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *movie* updates
-    if movie.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-        # keep track of start time/frame for later
-        movie.frameNStart = frameN  # exact frame index
-        movie.tStart = t  # local t and not account for scr refresh
-        movie.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(movie, 'tStartRefresh')  # time at next scr refresh
-        movie.setAutoDraw(True)
-    
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
@@ -1246,7 +1228,6 @@ while continueRoutine:
 for thisComponent in videoInstructionsComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-movie.stop()
 # the Routine "videoInstructions" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -3409,7 +3390,7 @@ for thisBlockloop in blockloop:
 continueRoutine = True
 # update component parameters for each repeat
 # session number will serve as prevscore
-prevscore = expInfo['session']
+prevscore = expInfo['baseline_score']
 prevscore = float(prevscore)
 
 reward_difference = reward_number - prevscore

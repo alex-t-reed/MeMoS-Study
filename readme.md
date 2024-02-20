@@ -24,7 +24,9 @@ Each folder contains specific materials, such as code, data, documentation, and 
 
 In each task it is possible to earn up to $5, except $5 in the second task if you earned $5 in the first task, because it is the only of the 4 tasks that pay a reward based on your improvement from your baseline task performance. 
 
-For any part where the experimenter has to save input, **the key to move forward is the 'm' key**, this is an arbitrary key and was used so that in-person participants would wait as the experimenter would write information that would be needed for coordinating the next part of the study *for example writing the score from the baseline task before proceeding to enter in the participant's score in the do better task*.
+As of 2/20, the 'm' key no longer will be used to add in the score manually for the do better task, instead, there will be a section on the experiment prompt that is below the id that says baseline_score, that is where the baseline_score will be added. See below:
+
+<img src="https://github.com/alex-t-reed/MeMoS-Study/blob/main/MeMoS_Do_Better_Prompt.png" width="300" alt="Image of Code Routine">
 
 ## How to Use
 
