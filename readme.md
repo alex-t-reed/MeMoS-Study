@@ -32,13 +32,13 @@ You must download [PsychoPy](https://www.psychopy.org/download.html| width=100) 
 
 Each `.psyexp` experiment file in each folder contains a code block that allows you to switch between actual and testing mode. In testing mode, you can debug the experiment without viewing all the stimuli. See the image below (each task has this code block):
 
-![](https://github.com/alex-t-reed/MeMoS-Study/blob/main/Code_Routine.png |  width=100)
+<img src="https://github.com/alex-t-reed/MeMoS-Study/blob/main/Code_Routine.png" width="100" alt="Image of Code Routine">
 
 There is a "Code" routine in each experiment that I have added a "mode" variable to that can be set to "actual" or "testing". Changing to a testing mode makes the experiment signficantly faster by reducing stimuli numbers and blocks. Why? To fix bugs and add in new features in a more timely manner.
 
 Each experiment can be commenced with the green play button near the top of the experiment. Then you will be prompted to enter participant info such as ID and session, then hit OK and the experiment will begin. See below for example in the Baseline task:
 
-![](https://github.com/alex-t-reed/MeMoS-Study/blob/main/MeMoS_Baseline_Taskbar.png| width=100)
+<img src="https://github.com/alex-t-reed/MeMoS-Study/blob/main/MeMoS_Baseline_Taskbar.png" width="100" alt="Image of Baseline Taskbar">
 
 ## Video Compression
 
