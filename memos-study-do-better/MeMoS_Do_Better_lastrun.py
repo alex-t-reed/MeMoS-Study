@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.2.3),
-    on Tue Feb 20 02:07:08 2024
+    on Tue Feb 20 03:10:36 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -166,16 +166,20 @@ commitment_question_response = visual.TextBox2(
      name='commitment_question_response',
      autoLog=True,
 )
-mouse_1 = event.Mouse(win=win)
-x, y = [None, None]
-mouse_1.mouseClock = core.Clock()
-Clickable_1 = visual.TextStim(win=win, name='Clickable_1',
-    text='When finished, click here to go to the next question. ',
-    font='Open Sans',
-    pos=(0.3, -0.3), height=0.04, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-3.0);
+commmitment_do_better_button = visual.ButtonStim(win, 
+    text='When finished, click here to go to the next question. ', font='Open Sans',
+    pos=(0.6, -0.3),
+    letterHeight=0.02,
+    size=None, borderWidth=0.0,
+    fillColor='darkgrey', borderColor=None,
+    color='white', colorSpace='rgb',
+    opacity=None,
+    bold=True, italic=False,
+    padding=None,
+    anchor='center',
+    name='commmitment_do_better_button'
+)
+commmitment_do_better_button.buttonClock = core.Clock()
 
 # Initialize components for Routine "Code"
 CodeClock = core.Clock()
@@ -782,19 +786,19 @@ Blank_2 = visual.TextStim(win=win, name='Blank_2',
     languageStyle='LTR',
     depth=0.0);
 
-# Initialize components for Routine "FreeResponse_2"
-FreeResponse_2Clock = core.Clock()
-Question_2 = visual.TextStim(win=win, name='Question_2',
+# Initialize components for Routine "Task_Feedback"
+Task_FeedbackClock = core.Clock()
+task_feedback_question = visual.TextStim(win=win, name='task_feedback_question',
     text='Task Feedback\n\nDo you have any feedback or comments about the task?',
     font='Open Sans',
     pos=(0, 0.3), height=0.04, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
-comments = visual.TextBox2(
+task_feedback_response = visual.TextBox2(
      win, text='Please type your response here . . . ', font='Open Sans',
      pos=(0, 0),     letterHeight=0.02,
-     size=(1.0, 0.03), borderWidth=2.0,
+     size=(1.0, 0.09), borderWidth=2.0,
      color='black', colorSpace='rgb',
      opacity=1.0,
      bold=False, italic=False,
@@ -804,19 +808,23 @@ comments = visual.TextBox2(
      fillColor='white', borderColor=None,
      flipHoriz=False, flipVert=False,
      editable=True,
-     name='comments',
+     name='task_feedback_response',
      autoLog=True,
 )
-mouse = event.Mouse(win=win)
-x, y = [None, None]
-mouse.mouseClock = core.Clock()
-Clickable_2 = visual.TextStim(win=win, name='Clickable_2',
-    text='When finished, click here to continue. ',
-    font='Open Sans',
-    pos=(0.3, -0.3), height=0.04, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-3.0);
+task_feedback_button = visual.ButtonStim(win, 
+    text='When finished, click here to go to the next question. ', font='Open Sans',
+    pos=(0.6, -0.3),
+    letterHeight=0.02,
+    size=None, borderWidth=0.0,
+    fillColor='darkgrey', borderColor=None,
+    color='white', colorSpace='rgb',
+    opacity=None,
+    bold=True, italic=False,
+    padding=None,
+    anchor='center',
+    name='task_feedback_button'
+)
+task_feedback_button.buttonClock = core.Clock()
 
 # Initialize components for Routine "FinishScreen"
 FinishScreenClock = core.Clock()
@@ -1235,11 +1243,8 @@ routineTimer.reset()
 continueRoutine = True
 # update component parameters for each repeat
 commitment_question_response.reset()
-# setup some python lists for storing info about the mouse_1
-mouse_1.clicked_name = []
-gotValidClick = False  # until a click is received
 # keep track of which components have finished
-Commitment_Do_Better_ResponseComponents = [commitment_question, commitment_question_response, mouse_1, Clickable_1]
+Commitment_Do_Better_ResponseComponents = [commitment_question, commitment_question_response, commmitment_do_better_button]
 for thisComponent in Commitment_Do_Better_ResponseComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1279,43 +1284,31 @@ while continueRoutine:
         commitment_question_response.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(commitment_question_response, 'tStartRefresh')  # time at next scr refresh
         commitment_question_response.setAutoDraw(True)
-    # *mouse_1* updates
-    if mouse_1.status == NOT_STARTED and t >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        mouse_1.frameNStart = frameN  # exact frame index
-        mouse_1.tStart = t  # local t and not account for scr refresh
-        mouse_1.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(mouse_1, 'tStartRefresh')  # time at next scr refresh
-        mouse_1.status = STARTED
-        mouse_1.mouseClock.reset()
-        prevButtonState = mouse_1.getPressed()  # if button is down already this ISN'T a new click
-    if mouse_1.status == STARTED:  # only update if started and not finished!
-        buttons = mouse_1.getPressed()
-        if buttons != prevButtonState:  # button state changed?
-            prevButtonState = buttons
-            if sum(buttons) > 0:  # state changed to a new click
-                # check if the mouse was inside our 'clickable' objects
-                gotValidClick = False
-                try:
-                    iter(Clickable_1)
-                    clickableList = Clickable_1
-                except:
-                    clickableList = [Clickable_1]
-                for obj in clickableList:
-                    if obj.contains(mouse_1):
-                        gotValidClick = True
-                        mouse_1.clicked_name.append(obj.name)
-                if gotValidClick:  # abort routine on response
-                    continueRoutine = False
     
-    # *Clickable_1* updates
-    if Clickable_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *commmitment_do_better_button* updates
+    if commmitment_do_better_button.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
         # keep track of start time/frame for later
-        Clickable_1.frameNStart = frameN  # exact frame index
-        Clickable_1.tStart = t  # local t and not account for scr refresh
-        Clickable_1.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(Clickable_1, 'tStartRefresh')  # time at next scr refresh
-        Clickable_1.setAutoDraw(True)
+        commmitment_do_better_button.frameNStart = frameN  # exact frame index
+        commmitment_do_better_button.tStart = t  # local t and not account for scr refresh
+        commmitment_do_better_button.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(commmitment_do_better_button, 'tStartRefresh')  # time at next scr refresh
+        commmitment_do_better_button.setAutoDraw(True)
+    if commmitment_do_better_button.status == STARTED:
+        # check whether commmitment_do_better_button has been pressed
+        if commmitment_do_better_button.isClicked:
+            if not commmitment_do_better_button.wasClicked:
+                commmitment_do_better_button.timesOn.append(commmitment_do_better_button.buttonClock.getTime()) # store time of first click
+                commmitment_do_better_button.timesOff.append(commmitment_do_better_button.buttonClock.getTime()) # store time clicked until
+            else:
+                commmitment_do_better_button.timesOff[-1] = commmitment_do_better_button.buttonClock.getTime() # update time clicked until
+            if not commmitment_do_better_button.wasClicked:
+                continueRoutine = False  # end routine when commmitment_do_better_button is clicked
+                None
+            commmitment_do_better_button.wasClicked = True  # if commmitment_do_better_button is still clicked next frame, it is not a new click
+        else:
+            commmitment_do_better_button.wasClicked = False  # if commmitment_do_better_button is clicked next frame, it is a new click
+    else:
+        commmitment_do_better_button.wasClicked = False  # if commmitment_do_better_button is clicked next frame, it is a new click
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1343,10 +1336,15 @@ thisExp.addData('commitment_question.stopped', commitment_question.tStopRefresh)
 thisExp.addData('commitment_question_response.text',commitment_question_response.text)
 thisExp.addData('commitment_question_response.started', commitment_question_response.tStartRefresh)
 thisExp.addData('commitment_question_response.stopped', commitment_question_response.tStopRefresh)
-# store data for thisExp (ExperimentHandler)
-thisExp.nextEntry()
-thisExp.addData('Clickable_1.started', Clickable_1.tStartRefresh)
-thisExp.addData('Clickable_1.stopped', Clickable_1.tStopRefresh)
+thisExp.addData('commmitment_do_better_button.started', commmitment_do_better_button.tStartRefresh)
+thisExp.addData('commmitment_do_better_button.stopped', commmitment_do_better_button.tStopRefresh)
+thisExp.addData('commmitment_do_better_button.numClicks', commmitment_do_better_button.numClicks)
+if commmitment_do_better_button.numClicks:
+   thisExp.addData('commmitment_do_better_button.timesOn', commmitment_do_better_button.timesOn)
+   thisExp.addData('commmitment_do_better_button.timesOff', commmitment_do_better_button.timesOff)
+else:
+   thisExp.addData('commmitment_do_better_button.timesOn', "")
+   thisExp.addData('commmitment_do_better_button.timesOff', "")
 # the Routine "Commitment_Do_Better_Response" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -4845,16 +4843,13 @@ for thisComponent in Blank100Components:
 thisExp.addData('Blank_2.started', Blank_2.tStartRefresh)
 thisExp.addData('Blank_2.stopped', Blank_2.tStopRefresh)
 
-# ------Prepare to start Routine "FreeResponse_2"-------
+# ------Prepare to start Routine "Task_Feedback"-------
 continueRoutine = True
 # update component parameters for each repeat
-comments.reset()
-# setup some python lists for storing info about the mouse
-mouse.clicked_name = []
-gotValidClick = False  # until a click is received
+task_feedback_response.reset()
 # keep track of which components have finished
-FreeResponse_2Components = [Question_2, comments, mouse, Clickable_2]
-for thisComponent in FreeResponse_2Components:
+Task_FeedbackComponents = [task_feedback_question, task_feedback_response, task_feedback_button]
+for thisComponent in Task_FeedbackComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -4864,72 +4859,60 @@ for thisComponent in FreeResponse_2Components:
 # reset timers
 t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-FreeResponse_2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+Task_FeedbackClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
-# -------Run Routine "FreeResponse_2"-------
+# -------Run Routine "Task_Feedback"-------
 while continueRoutine:
     # get current time
-    t = FreeResponse_2Clock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=FreeResponse_2Clock)
+    t = Task_FeedbackClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Task_FeedbackClock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *Question_2* updates
-    if Question_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *task_feedback_question* updates
+    if task_feedback_question.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        Question_2.frameNStart = frameN  # exact frame index
-        Question_2.tStart = t  # local t and not account for scr refresh
-        Question_2.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(Question_2, 'tStartRefresh')  # time at next scr refresh
-        Question_2.setAutoDraw(True)
+        task_feedback_question.frameNStart = frameN  # exact frame index
+        task_feedback_question.tStart = t  # local t and not account for scr refresh
+        task_feedback_question.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(task_feedback_question, 'tStartRefresh')  # time at next scr refresh
+        task_feedback_question.setAutoDraw(True)
     
-    # *comments* updates
-    if comments.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *task_feedback_response* updates
+    if task_feedback_response.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        comments.frameNStart = frameN  # exact frame index
-        comments.tStart = t  # local t and not account for scr refresh
-        comments.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(comments, 'tStartRefresh')  # time at next scr refresh
-        comments.setAutoDraw(True)
-    # *mouse* updates
-    if mouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        mouse.frameNStart = frameN  # exact frame index
-        mouse.tStart = t  # local t and not account for scr refresh
-        mouse.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(mouse, 'tStartRefresh')  # time at next scr refresh
-        mouse.status = STARTED
-        mouse.mouseClock.reset()
-        prevButtonState = mouse.getPressed()  # if button is down already this ISN'T a new click
-    if mouse.status == STARTED:  # only update if started and not finished!
-        buttons = mouse.getPressed()
-        if buttons != prevButtonState:  # button state changed?
-            prevButtonState = buttons
-            if sum(buttons) > 0:  # state changed to a new click
-                # check if the mouse was inside our 'clickable' objects
-                gotValidClick = False
-                try:
-                    iter(Clickable_2)
-                    clickableList = Clickable_2
-                except:
-                    clickableList = [Clickable_2]
-                for obj in clickableList:
-                    if obj.contains(mouse):
-                        gotValidClick = True
-                        mouse.clicked_name.append(obj.name)
-                if gotValidClick:  # abort routine on response
-                    continueRoutine = False
+        task_feedback_response.frameNStart = frameN  # exact frame index
+        task_feedback_response.tStart = t  # local t and not account for scr refresh
+        task_feedback_response.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(task_feedback_response, 'tStartRefresh')  # time at next scr refresh
+        task_feedback_response.setAutoDraw(True)
     
-    # *Clickable_2* updates
-    if Clickable_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *task_feedback_button* updates
+    if task_feedback_button.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
         # keep track of start time/frame for later
-        Clickable_2.frameNStart = frameN  # exact frame index
-        Clickable_2.tStart = t  # local t and not account for scr refresh
-        Clickable_2.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(Clickable_2, 'tStartRefresh')  # time at next scr refresh
-        Clickable_2.setAutoDraw(True)
+        task_feedback_button.frameNStart = frameN  # exact frame index
+        task_feedback_button.tStart = t  # local t and not account for scr refresh
+        task_feedback_button.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(task_feedback_button, 'tStartRefresh')  # time at next scr refresh
+        task_feedback_button.setAutoDraw(True)
+    if task_feedback_button.status == STARTED:
+        # check whether task_feedback_button has been pressed
+        if task_feedback_button.isClicked:
+            if not task_feedback_button.wasClicked:
+                task_feedback_button.timesOn.append(task_feedback_button.buttonClock.getTime()) # store time of first click
+                task_feedback_button.timesOff.append(task_feedback_button.buttonClock.getTime()) # store time clicked until
+            else:
+                task_feedback_button.timesOff[-1] = task_feedback_button.buttonClock.getTime() # update time clicked until
+            if not task_feedback_button.wasClicked:
+                continueRoutine = False  # end routine when task_feedback_button is clicked
+                None
+            task_feedback_button.wasClicked = True  # if task_feedback_button is still clicked next frame, it is not a new click
+        else:
+            task_feedback_button.wasClicked = False  # if task_feedback_button is clicked next frame, it is a new click
+    else:
+        task_feedback_button.wasClicked = False  # if task_feedback_button is clicked next frame, it is a new click
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4939,7 +4922,7 @@ while continueRoutine:
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in FreeResponse_2Components:
+    for thisComponent in Task_FeedbackComponents:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -4948,20 +4931,25 @@ while continueRoutine:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# -------Ending Routine "FreeResponse_2"-------
-for thisComponent in FreeResponse_2Components:
+# -------Ending Routine "Task_Feedback"-------
+for thisComponent in Task_FeedbackComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('Question_2.started', Question_2.tStartRefresh)
-thisExp.addData('Question_2.stopped', Question_2.tStopRefresh)
-thisExp.addData('comments.text',comments.text)
-thisExp.addData('comments.started', comments.tStartRefresh)
-thisExp.addData('comments.stopped', comments.tStopRefresh)
-# store data for thisExp (ExperimentHandler)
-thisExp.nextEntry()
-thisExp.addData('Clickable_2.started', Clickable_2.tStartRefresh)
-thisExp.addData('Clickable_2.stopped', Clickable_2.tStopRefresh)
-# the Routine "FreeResponse_2" was not non-slip safe, so reset the non-slip timer
+thisExp.addData('task_feedback_question.started', task_feedback_question.tStartRefresh)
+thisExp.addData('task_feedback_question.stopped', task_feedback_question.tStopRefresh)
+thisExp.addData('task_feedback_response.text',task_feedback_response.text)
+thisExp.addData('task_feedback_response.started', task_feedback_response.tStartRefresh)
+thisExp.addData('task_feedback_response.stopped', task_feedback_response.tStopRefresh)
+thisExp.addData('task_feedback_button.started', task_feedback_button.tStartRefresh)
+thisExp.addData('task_feedback_button.stopped', task_feedback_button.tStopRefresh)
+thisExp.addData('task_feedback_button.numClicks', task_feedback_button.numClicks)
+if task_feedback_button.numClicks:
+   thisExp.addData('task_feedback_button.timesOn', task_feedback_button.timesOn)
+   thisExp.addData('task_feedback_button.timesOff', task_feedback_button.timesOff)
+else:
+   thisExp.addData('task_feedback_button.timesOn', "")
+   thisExp.addData('task_feedback_button.timesOff', "")
+# the Routine "Task_Feedback" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # ------Prepare to start Routine "FinishScreen"-------
