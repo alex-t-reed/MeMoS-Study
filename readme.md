@@ -18,9 +18,9 @@ Each folder contains specific materials, such as code, data, documentation, and 
 ## Experiment Order
 
 1. Baseline Task
-2. Do Better
-3. Memory or Money
-4. Money or Memory
+2. Do Better Task
+3. Memory Task or Money Task
+4. Money Task or Memory Task
 
 In each task it is possible to earn up to $5, except $5 in the second task if you earned $5 in the first task, because it is the only of the 4 tasks that pay a reward based on your improvement from your baseline task performance. 
 
@@ -30,19 +30,23 @@ For any part where the experimenter has to save input, the key to move forward i
 
 You must download [PsychoPy](https://www.psychopy.org/download.html) and use version 2021.2.3. Code blocks can be altered using Python or JavaScript.
 
-Each `.psyexp` experiment file in each folder contains a code block that allows you to switch between actual and testing mode. In testing mode, you can debug the experiment without viewing all the stimuli.
+Each `.psyexp` experiment file in each folder contains a code block that allows you to switch between actual and testing mode. In testing mode, you can debug the experiment without viewing all the stimuli. See the image below (each task has this code block):
+
+[!Image of testing vs. actual code routine](https://github.com/alex-t-reed/MeMoS-Study/blob/main/Code_Routine.png)
 
 There is a "Code" routine in each experiment that I have added a "mode" variable to that can be set to "actual" or "testing". Changing to a testing mode makes the experiment signficantly faster by reducing stimuli numbers and blocks. Why? To fix bugs and add in new features in a more timely manner.
 
-Each experiment can be commenced with the green play button near the top of the experiment. Then you will be prompted to enter participant info such as ID and session, then hit OK and the experiment will begin.
+Each experiment can be commenced with the green play button near the top of the experiment. Then you will be prompted to enter participant info such as ID and session, then hit OK and the experiment will begin. See below for example in the Baseline task:
+
+[!Image of Baseline Task bar](https://github.com/alex-t-reed/MeMoS-Study/blob/main/MeMoS_Baseline_Taskbar.png)
 
 ## Video Compression
 
 Due to GitHub's 100 MB limit, these videos have been heavily compressed using [FFmpeg](https://ffmpeg.org/) via the terminal as well as [FreeConvert](https://www.freeconvert.com/video-compressor/) for videos that were still over the 100 MB limit. Please see below for the before and after compression sizes for each video found in the */resources/videos/ folder of each experiment.
-- Baseline video: 416.9 MB to 67.6 MB (FFmpeg and FreeConvert)
-- Do better video: 116.7 MB to 34.4 MB (FFmpeg)
-- Memory video: 362.8 MB to 73.8 MB (FFmpeg and FreeConvert)
-- Money video: 361.5 MB to 70.8 MB (FFmpeg and FreeConvert)
+- Baseline Task video: 416.9 MB to 67.6 MB (FFmpeg and FreeConvert)
+- Do Better Task video: 116.7 MB to 34.4 MB (FFmpeg)
+- Memory Task video: 362.8 MB to 73.8 MB (FFmpeg and FreeConvert)
+- Money Task video: 361.5 MB to 70.8 MB (FFmpeg and FreeConvert)
 
 ## Contributors
 
