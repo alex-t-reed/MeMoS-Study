@@ -24,13 +24,13 @@ Each folder contains specific materials, such as code, data, documentation, and 
 
 In each task it is possible to earn up to $5, except $5 in the second task if you earned $5 in the first task, because it is the only of the 4 tasks that pay a reward based on your improvement from your baseline task performance. 
 
-As of 2/20, the 'm' key no longer will be used to add in the score manually for the do better task, instead, there will be a section on the experiment prompt that is below the id that says baseline_score, that is where the baseline_score will be added. See below:
+As of 2/20/24, the 'm' key no longer will be used to add in the score manually for the do better task, instead, there will be a section on the experiment prompt that is below the id that says baseline_score, that is where the baseline_score will be added. Before, the score would be entered manually after setting up the task, so hopefully this makes in-person facilitation easier. See below for an example of entering a score of 550 for participant 001:
 
 <img src="https://github.com/alex-t-reed/MeMoS-Study/blob/main/MeMoS_Do_Better_Prompt.png" width="300" alt="Image of Code Routine">
 
 ## How to Use
 
-You must download [PsychoPy](https://www.psychopy.org/download.html| width=300) and use version 2021.2.3. Code blocks can be altered using Python or JavaScript.
+You must download [PsychoPy](https://www.psychopy.org/download.html) and use version 2021.2.3. Code blocks can be altered using Python or JavaScript.
 
 Each `.psyexp` experiment file in each folder contains a code block that allows you to switch between actual and testing mode. In testing mode, you can debug the experiment without viewing all the stimuli. See the image below (each task has this code block):
 
