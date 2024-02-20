@@ -9,9 +9,9 @@ The MeMoS Study aims to determine whether intrinsically or extrinsically directe
 ## Repository Structure
 
 - `memos-study-baseline/`: Materials and documentation related to the baseline task condition.
--  `memos-study-do-better/`: Materials and documentation related to the "do better" task condition.
--   `memos-study-memory/`: Materials and documentation related to the memory-focused task condition.
--    `memos-study-money/`: Materials and documentation related to the money-focused task condition.
+- `memos-study-do-better/`: Materials and documentation related to the "do better" task condition.
+- `memos-study-memory/`: Materials and documentation related to the memory-focused task condition.
+- `memos-study-money/`: Materials and documentation related to the money-focused task condition.
 
 Each folder contains specific materials, such as code, data, documentation, and analysis scripts, relevant to the corresponding task condition.
 
