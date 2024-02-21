@@ -26,7 +26,7 @@ The study follows a specific order of tasks:
 3. Memory Task or Money Task
 4. Money Task or Memory Task
 
-In each task, participants can earn up to $5, except $5 in the second task if they earned $5 in the first task. This adjustment is based on their improvement from the baseline task performance.
+In each task, participants can earn up to $5, except $5 in the second task if they earned $5 in the first task. This adjustment is based on their improvement from the baseline task performance. Pay scales are included in the video which can be found in the 'resources/videos/' folder of each experiment subfolder.
 
 ## Task Instructions Update
 
