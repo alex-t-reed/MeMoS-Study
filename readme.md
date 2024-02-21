@@ -69,6 +69,6 @@ Except in cases of preemptive publication to the Miller Memory Lab, individuals 
 
 For inquiries regarding the utilization of these materials or the procurement of permission for publishing study outcomes, please contact:
 
-- Alex Reed: [alexreed.atr@gmail.com](mailto:alexreed.atr@gmail.com)
+- Alex Reed: [alexreed.atr@gmail.com](mailto:alexreed.atr@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alextreed)
 - Sara Leslie: [sara.leslie@psych.ucsb.edu](mailto:sara.leslie@psych.ucsb.edu)
 - Courtney Durdle: [courtney.durdle@psych.ucsb.edu](mailto:courtney.durdle@psych.ucsb.edu)
