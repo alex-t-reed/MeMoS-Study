@@ -59,14 +59,6 @@ Due to GitHub's 100 MB limit, videos in the repository have been heavily compres
 - [Sara Leslie](mailto:sara.leslie@psych.ucsb.edu): Original Task Developer & MeMoS Study Planner, Graduate Student in the Miller Memory Lab
 - [Courtney Durdle](mailto:courtney.durdle@psych.ucsb.edu): MeMoS Study Planner, Graduate Student in the Miller Memory Lab
 
-## Contact
-
-For inquiries about the MeMoS Study or this repository, please contact:
-
-- Alex Reed: [alexreed.atr@gmail.com](mailto:alexreed.atr@gmail.com)
-- Sara Leslie: [sara.leslie@psych.ucsb.edu](mailto:sara.leslie@psych.ucsb.edu)
-- Courtney Durdle: [courtney.durdle@psych.ucsb.edu](mailto:courtney.durdle@psych.ucsb.edu)
-
 For more information about the Miller Memory Lab, please visit [https://labs.psych.ucsb.edu/miller/michael/](https://labs.psych.ucsb.edu/miller/michael/).
 
 ## Disclaimer
