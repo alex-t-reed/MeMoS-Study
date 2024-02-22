@@ -26,7 +26,7 @@ The study follows a specific order of tasks:
 3. Memory Task or Money Task
 4. Money Task or Memory Task
 
-In each task, participants can earn up to $5, except $5 in the second task if they earned $5 in the first task. This adjustment is based on their improvement from the baseline task performance.
+In each task, participants can earn up to $5, except $5 in the second task if they earned $5 in the first task. This adjustment is based on their improvement from the baseline task performance. Pay scales are included in the video which can be found in the `resources/videos/` folder of each experiment subfolder.
 
 ## Task Instructions Update
 
@@ -70,5 +70,6 @@ Except in cases of preemptive publication to the Miller Memory Lab, individuals 
 For inquiries regarding the utilization of these materials or the procurement of permission for publishing study outcomes, please contact:
 
 - Alex Reed: [alexreed.atr@gmail.com](mailto:alexreed.atr@gmail.com)
+- [![Alex Reed - LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alextreed)
 - Sara Leslie: [sara.leslie@psych.ucsb.edu](mailto:sara.leslie@psych.ucsb.edu)
 - Courtney Durdle: [courtney.durdle@psych.ucsb.edu](mailto:courtney.durdle@psych.ucsb.edu)
