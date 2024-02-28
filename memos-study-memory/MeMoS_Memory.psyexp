@@ -133,10 +133,10 @@
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="# Task by Sara Leslie, 2023&amp;#10;# Repurposed for MeMoS Study by Alex Reed, 2023&amp;#10;&amp;#10;import random  # Import the random module&amp;#10;&amp;#10;mode = 'actual'&amp;#10;&amp;#10;if mode == 'testing':&amp;#10;    # Define necessary variables for testing block&amp;#10;    num_study = 3&amp;#10;    pics_per_block = 6&amp;#10;    old_per_cond = 1&amp;#10;    new_per_cond = 1&amp;#10;    num_test = old_per_cond + new_per_cond&amp;#10;    num_items = pics_per_block&amp;#10;    num_blocks = 2&amp;#10;elif mode == 'actual':&amp;#10;    # Define necessary variables for actual block&amp;#10;    num_study = 27&amp;#10;    pics_per_block = 54&amp;#10;    old_per_cond = 9&amp;#10;    new_per_cond = 9&amp;#10;    num_test = old_per_cond + new_per_cond&amp;#10;    num_items = pics_per_block&amp;#10;    num_blocks = 6&amp;#10;&amp;#10;# Initialize variables&amp;#10;blockn = 0&amp;#10;blocknumber = 1&amp;#10;blocknumber_alt = 1&amp;#10;reward_number = 0&amp;#10;themecounter = 0&amp;#10;condorder_counter = 0&amp;#10;condorder_now = []&amp;#10;trialpay = 0&amp;#10;totaltrialnum = 1&amp;#10;&amp;#10;# Define the permutations of conditions for the blocks&amp;#10;cond_perm = [[0, 1, 2], [1, 0, 2], [2, 0, 1],&amp;#10;             [0, 2, 1], [1, 2, 0], [2, 1, 0],&amp;#10;             [0, 1, 2], [1, 0, 2], [2, 0, 1],&amp;#10;             [0, 2, 1], [1, 2, 0], [2, 1, 0]]&amp;#10;&amp;#10;# Shuffle the permutation list using the random module&amp;#10;random.shuffle(cond_perm)&amp;#10;&amp;#10;# Define face sets for each category&amp;#10;faceset1 = [&quot;resources/faceset13/faceset13_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset2 = [&quot;resources/faceset14/faceset14_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset3 = [&quot;resources/faceset15/faceset15_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset4 = [&quot;resources/faceset16/faceset16_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset5 = [&quot;resources/faceset17/faceset17_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;faceset6 = [&quot;resources/faceset18/faceset18_&quot; + str(num) + &quot;.jpg&quot; for num in range(1, num_items + 1)]&amp;#10;&amp;#10;# Shuffle each face set using the random module&amp;#10;random.shuffle(faceset1)&amp;#10;random.shuffle(faceset2)&amp;#10;random.shuffle(faceset3)&amp;#10;random.shuffle(faceset4)&amp;#10;random.shuffle(faceset5)&amp;#10;random.shuffle(faceset6)&amp;#10;&amp;#10;# Organize the face sets in an image array&amp;#10;imagearray = [&amp;#10;    faceset1,&amp;#10;    faceset2,&amp;#10;    faceset3,&amp;#10;    faceset4,&amp;#10;    faceset5,&amp;#10;    faceset6&amp;#10;]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;var blockn, blocknumber, blocknumber_alt, cond_perm, condorder_counter, condorder_now, faceset1, faceset2, faceset3, faceset4, faceset5, faceset6, imagearray, mode, new_per_cond, num_blocks, num_items, num_study, num_test, old_per_cond, pics_per_block, reward_number, themecounter, totaltrialnum, trialpay;&amp;#10;mode = &quot;actual&quot;;&amp;#10;if ((mode === &quot;testing&quot;)) {&amp;#10;    num_study = 3;&amp;#10;    pics_per_block = 6;&amp;#10;    old_per_cond = 1;&amp;#10;    new_per_cond = 1;&amp;#10;    num_test = (old_per_cond + new_per_cond);&amp;#10;    num_items = pics_per_block;&amp;#10;    num_blocks = 2;&amp;#10;} else {&amp;#10;    if ((mode === &quot;actual&quot;)) {&amp;#10;        num_study = 27;&amp;#10;        pics_per_block = 54;&amp;#10;        old_per_cond = 9;&amp;#10;        new_per_cond = 9;&amp;#10;        num_test = (old_per_cond + new_per_cond);&amp;#10;        num_items = pics_per_block;&amp;#10;        num_blocks = 6;&amp;#10;    }&amp;#10;}&amp;#10;blockn = 0;&amp;#10;blocknumber = 1;&amp;#10;blocknumber_alt = 1;&amp;#10;reward_number = 0;&amp;#10;themecounter = 0;&amp;#10;condorder_counter = 0;&amp;#10;condorder_now = [];&amp;#10;trialpay = 0;&amp;#10;totaltrialnum = 1;&amp;#10;cond_perm = [[0, 1, 2], [1, 0, 2], [2, 0, 1], [0, 2, 1], [1, 2, 0], [2, 1, 0], [0, 1, 2], [1, 0, 2], [2, 0, 1], [0, 2, 1], [1, 2, 0], [2, 1, 0]];&amp;#10;random.shuffle(cond_perm);&amp;#10;faceset1 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset13/faceset13_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset2 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset14/faceset14_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset3 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset15/faceset15_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset4 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset16/faceset16_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset5 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset17/faceset17_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset6 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset18/faceset18_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;random.shuffle(faceset1);&amp;#10;random.shuffle(faceset2);&amp;#10;random.shuffle(faceset3);&amp;#10;random.shuffle(faceset4);&amp;#10;random.shuffle(faceset5);&amp;#10;random.shuffle(faceset6);&amp;#10;imagearray = [faceset1, faceset2, faceset3, faceset4, faceset5, faceset6];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="// import * as random from 'random';&amp;#10;var blockn, blocknumber, blocknumber_alt, cond_perm, condorder_counter, condorder_now, faceset1, faceset2, faceset3, faceset4, faceset5, faceset6, imagearray, mode, new_per_cond, num_blocks, num_items, num_study, num_test, old_per_cond, pics_per_block, reward_number, themecounter, totaltrialnum, trialpay;&amp;#10;mode = &quot;actual&quot;;&amp;#10;if ((mode === &quot;testing&quot;)) {&amp;#10;    num_study = 3;&amp;#10;    pics_per_block = 6;&amp;#10;    old_per_cond = 1;&amp;#10;    new_per_cond = 1;&amp;#10;    num_test = (old_per_cond + new_per_cond);&amp;#10;    num_items = pics_per_block;&amp;#10;    num_blocks = 2;&amp;#10;} else {&amp;#10;    if ((mode === &quot;actual&quot;)) {&amp;#10;        num_study = 27;&amp;#10;        pics_per_block = 54;&amp;#10;        old_per_cond = 9;&amp;#10;        new_per_cond = 9;&amp;#10;        num_test = (old_per_cond + new_per_cond);&amp;#10;        num_items = pics_per_block;&amp;#10;        num_blocks = 6;&amp;#10;    }&amp;#10;}&amp;#10;blockn = 0;&amp;#10;blocknumber = 1;&amp;#10;blocknumber_alt = 1;&amp;#10;reward_number = 0;&amp;#10;themecounter = 0;&amp;#10;condorder_counter = 0;&amp;#10;condorder_now = [];&amp;#10;trialpay = 0;&amp;#10;totaltrialnum = 1;&amp;#10;cond_perm = [[0, 1, 2], [1, 0, 2], [2, 0, 1], [0, 2, 1], [1, 2, 0], [2, 1, 0], [0, 1, 2], [1, 0, 2], [2, 0, 1], [0, 2, 1], [1, 2, 0], [2, 1, 0]];&amp;#10;random.shuffle(cond_perm);&amp;#10;faceset1 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset13/faceset13_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset2 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset14/faceset14_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset3 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset15/faceset15_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset4 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset16/faceset16_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset5 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset17/faceset17_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;faceset6 = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(1, (num_items + 1));&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var num = _pj_b[_pj_c];&amp;#10;        _pj_a.push(((&quot;resources/faceset18/faceset18_&quot; + num.toString()) + &quot;.jpg&quot;));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;random.shuffle(faceset1);&amp;#10;random.shuffle(faceset2);&amp;#10;random.shuffle(faceset3);&amp;#10;random.shuffle(faceset4);&amp;#10;random.shuffle(faceset5);&amp;#10;random.shuffle(faceset6);&amp;#10;imagearray = [faceset1, faceset2, faceset3, faceset4, faceset5, faceset6];&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="/*&amp;#10;&amp;#10;studyarray = [[None for _ in range(6)] for _ in range(12)]&amp;#10;testarray = [[None for _ in range(12)] for _ in range(12)]&amp;#10;i = 0&amp;#10;ss = []&amp;#10;ts = []&amp;#10;&amp;#10;for j in range(12):&amp;#10;i = j*2&amp;#10;for k in range(6):&amp;#10;studyarray[j][k] = stim_file[pics_per_block*i + k]&amp;#10;for k in range(12):&amp;#10;testarray[j][k] = stim_file[pics_per_block*i + k]&amp;#10;console.log(ss)&amp;#10;&amp;#10;console.log(studyarray)&amp;#10;console.log(testarray)&amp;#10;*/&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;studyarray = [[None for _ in range(6)] for _ in range(12)]&amp;#10;testarray = [[None for _ in range(12)] for _ in range(12)]&amp;#10;i = 0&amp;#10;ss = []&amp;#10;ts = []&amp;#10;&amp;#10;for j in range(12):&amp;#10;    i = j*2&amp;#10;    for k in range(6):&amp;#10;        studyarray[j][k] = stim_file[pics_per_block*i + k]&amp;#10;    for k in range(12):&amp;#10;        testarray[j][k] = stim_file[pics_per_block*i + k]&amp;#10;    console.log(ss)&amp;#10;&amp;#10;console.log(studyarray)&amp;#10;console.log(testarray)&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -704,7 +704,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You have completed the third part of the experiment.&amp;#10;&amp;#10;Thank you! &amp;#10;&amp;#10;Press the ‘e’ key to exit.  &amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="You have completed the Memory part of the experiment.&amp;#10;&amp;#10;Thank you! &amp;#10;&amp;#10;Press the ‘e’ key to exit.  &amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="num"/>
       </TextComponent>
@@ -1246,104 +1246,6 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="Task_Feedback">
-      <TextComponent name="task_feedback_question">
-        <Param name="color" updates="constant" val="white" valType="color"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="None" valType="str"/>
-        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.04" valType="num"/>
-        <Param name="name" updates="None" val="task_feedback_question" valType="code"/>
-        <Param name="opacity" updates="constant" val="" valType="num"/>
-        <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0, 0.3)" valType="list"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Task Feedback&amp;#10;&amp;#10;Do you have any feedback or comments about the task?" valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
-      </TextComponent>
-      <TextboxComponent name="task_feedback_response">
-        <Param name="anchor" updates="constant" val="center" valType="str"/>
-        <Param name="autoLog" updates="constant" val="True" valType="bool"/>
-        <Param name="bold" updates="constant" val="False" valType="bool"/>
-        <Param name="borderColor" updates="constant" val="None" valType="color"/>
-        <Param name="borderWidth" updates="constant" val="2" valType="num"/>
-        <Param name="color" updates="constant" val="black" valType="color"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="editable" updates="constant" val="True" valType="bool"/>
-        <Param name="fillColor" updates="constant" val="white" valType="color"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
-        <Param name="italic" updates="constant" val="False" valType="bool"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
-        <Param name="lineSpacing" updates="constant" val="1.0" valType="num"/>
-        <Param name="name" updates="None" val="task_feedback_response" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="num"/>
-        <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="padding" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1.0, 0.09)" valType="list"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please type your response here . . . " valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </TextboxComponent>
-      <ButtonComponent name="task_feedback_button">
-        <Param name="anchor" updates="constant" val="center" valType="str"/>
-        <Param name="bold" updates="constant" val="True" valType="bool"/>
-        <Param name="borderColor" updates="constant" val="None" valType="color"/>
-        <Param name="borderWidth" updates="constant" val="0" valType="num"/>
-        <Param name="callback" updates="constant" val="" valType="extendedCode"/>
-        <Param name="color" updates="constant" val="white" valType="color"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="darkgrey" valType="color"/>
-        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="italic" updates="constant" val="False" valType="bool"/>
-        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
-        <Param name="name" updates="None" val="task_feedback_button" valType="code"/>
-        <Param name="oncePerClick" updates="constant" val="True" valType="bool"/>
-        <Param name="opacity" updates="constant" val="" valType="num"/>
-        <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="padding" updates="constant" val="" valType="num"/>
-        <Param name="pos" updates="constant" val="(0.6, -0.3)" valType="list"/>
-        <Param name="save" updates="None" val="every click" valType="str"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="" valType="list"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="When finished, click here to go to the next question. " valType="str"/>
-        <Param name="timeRelativeTo" updates="constant" val="button onset" valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </ButtonComponent>
-    </Routine>
     <Routine name="QuestionProb">
       <TextComponent name="probq">
         <Param name="color" updates="constant" val="white" valType="color"/>
@@ -1382,7 +1284,7 @@
         <Param name="font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="granularity" updates="constant" val=".1" valType="num"/>
-        <Param name="initVal" updates="None" val="0" valType="code"/>
+        <Param name="initVal" updates="None" val="50" valType="code"/>
         <Param name="labels" updates="constant" val="0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100" valType="list"/>
         <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
         <Param name="name" updates="None" val="probold_slider" valType="code"/>
@@ -1406,24 +1308,6 @@
         <Param name="ticks" updates="constant" val="(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </SliderComponent>
-      <MouseComponent name="mouse_probold">
-        <Param name="clickable" updates="constant" val="probold_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_probold" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
       <TextComponent name="instructions">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -1460,7 +1344,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.2" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -1506,7 +1390,7 @@
         <Param name="font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="granularity" updates="constant" val=".1" valType="num"/>
-        <Param name="initVal" updates="None" val="0" valType="code"/>
+        <Param name="initVal" updates="None" val="50" valType="code"/>
         <Param name="labels" updates="constant" val="0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100" valType="list"/>
         <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
         <Param name="name" updates="None" val="highconf_slider" valType="code"/>
@@ -1530,24 +1414,6 @@
         <Param name="ticks" updates="constant" val="(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </SliderComponent>
-      <MouseComponent name="mouse_highconf">
-        <Param name="clickable" updates="constant" val="highconf_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_highconf" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
       <TextComponent name="instructions2">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -1584,7 +1450,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.2" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -1630,7 +1496,7 @@
         <Param name="font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="granularity" updates="constant" val=".1" valType="num"/>
-        <Param name="initVal" updates="None" val="0" valType="code"/>
+        <Param name="initVal" updates="None" val="50" valType="code"/>
         <Param name="labels" updates="constant" val="0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100" valType="list"/>
         <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
         <Param name="name" updates="None" val="lowconf_slider" valType="code"/>
@@ -1654,24 +1520,6 @@
         <Param name="ticks" updates="constant" val="(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </SliderComponent>
-      <MouseComponent name="mouse_lowconf">
-        <Param name="clickable" updates="constant" val="lowconf_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_lowconf" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
       <TextComponent name="instructions3">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -1708,7 +1556,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.2" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -3508,7 +3356,7 @@
         <Param name="font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="granularity" updates="constant" val=".1" valType="num"/>
-        <Param name="initVal" updates="None" val="0" valType="code"/>
+        <Param name="initVal" updates="None" val="50" valType="code"/>
         <Param name="labels" updates="constant" val="0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100" valType="list"/>
         <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
         <Param name="name" updates="None" val="probcorrect_slider" valType="code"/>
@@ -3532,24 +3380,6 @@
         <Param name="ticks" updates="constant" val="(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </SliderComponent>
-      <MouseComponent name="mouse_probcorrect">
-        <Param name="clickable" updates="constant" val="probold_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_probcorrect" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
       <TextComponent name="instructions_2">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -3586,7 +3416,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.2" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -3632,7 +3462,7 @@
         <Param name="font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="granularity" updates="constant" val=".1" valType="num"/>
-        <Param name="initVal" updates="None" val="0" valType="code"/>
+        <Param name="initVal" updates="None" val="50" valType="code"/>
         <Param name="labels" updates="constant" val="0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100" valType="list"/>
         <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
         <Param name="name" updates="None" val="selfrank_slider_s1" valType="code"/>
@@ -3656,24 +3486,6 @@
         <Param name="ticks" updates="constant" val="(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </SliderComponent>
-      <MouseComponent name="mouse_selfrank">
-        <Param name="clickable" updates="constant" val="probold_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_selfrank" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
       <TextComponent name="instructions_3">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -3710,7 +3522,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.3" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -4171,7 +3983,7 @@
         <Param name="loop" updates="None" val="False" valType="bool"/>
         <Param name="movie" updates="constant" val="resources/videos/MeMoS - Memory Condition.mp4" valType="file"/>
         <Param name="name" updates="None" val="movie" valType="code"/>
-        <Param name="opacity" updates="constant" val="[1280,720]" valType="num"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
@@ -4293,24 +4105,6 @@
         <Param name="ticks" updates="constant" val="(1,2,3,4,5,6)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </SliderComponent>
-      <MouseComponent name="mouse_lowconf_2">
-        <Param name="clickable" updates="constant" val="lowconf_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_lowconf_2" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
       <TextComponent name="instructions3_2">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -4347,7 +4141,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.2" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -4377,7 +4171,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Overall, rate how often you based your final decision on your memory?" valType="str"/>
+        <Param name="text" updates="constant" val="Overall, rate to what extent you based your final decision on your memory?" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1.2" valType="num"/>
       </TextComponent>
@@ -4393,8 +4187,8 @@
         <Param name="font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="granularity" updates="constant" val=".1" valType="num"/>
-        <Param name="initVal" updates="None" val="0" valType="code"/>
-        <Param name="labels" updates="constant" val="&quot;Rarely&quot;, 2, 3, 4, 5, &quot;Often&quot;" valType="list"/>
+        <Param name="initVal" updates="None" val="3.5" valType="code"/>
+        <Param name="labels" updates="constant" val="1, 2, 3, 4, 5, 6" valType="list"/>
         <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
         <Param name="name" updates="None" val="memoryscale_q1" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
@@ -4417,24 +4211,6 @@
         <Param name="ticks" updates="constant" val="(1,2,3,4,5,6)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </SliderComponent>
-      <MouseComponent name="mouse_lowconf_3">
-        <Param name="clickable" updates="constant" val="lowconf_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_lowconf_3" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
       <TextComponent name="instructions3_3">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -4471,7 +4247,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.2" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -4501,7 +4277,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="When you were feeling uncertainty about a trial, rate how often you based your final decision on the money?" valType="str"/>
+        <Param name="text" updates="constant" val="When you were feeling uncertainty about a trial, to what extent do you think you based your final decision on the money?" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1.2" valType="num"/>
       </TextComponent>
@@ -4518,7 +4294,7 @@
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="granularity" updates="constant" val=".1" valType="num"/>
         <Param name="initVal" updates="None" val="3.5" valType="code"/>
-        <Param name="labels" updates="constant" val="&quot;Rarely&quot;, 2, 3, 4, 5, &quot;Often&quot;" valType="list"/>
+        <Param name="labels" updates="constant" val="1, 2, 3, 4, 5, 6" valType="list"/>
         <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
         <Param name="name" updates="None" val="uncertainty_money_q_response" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
@@ -4541,24 +4317,6 @@
         <Param name="ticks" updates="constant" val="(1,2,3,4,5,6)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </SliderComponent>
-      <MouseComponent name="mouse_lowconf_4">
-        <Param name="clickable" updates="constant" val="lowconf_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_lowconf_4" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
       <TextComponent name="instructions3_4">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -4595,7 +4353,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.2" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -4625,7 +4383,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="When you were feeling uncertainty about a trial, rate how often you based your final decision on memory?" valType="str"/>
+        <Param name="text" updates="constant" val="When you were feeling uncertainty about a trial, to what extent do you think you based your final decision on your memory?" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1.2" valType="num"/>
       </TextComponent>
@@ -4642,7 +4400,7 @@
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="granularity" updates="constant" val=".1" valType="num"/>
         <Param name="initVal" updates="None" val="3.5" valType="code"/>
-        <Param name="labels" updates="constant" val="&quot;Rarely&quot;, 2, 3, 4, 5, &quot;Often&quot;" valType="list"/>
+        <Param name="labels" updates="constant" val="1, 2, 3, 4, 5, 6" valType="list"/>
         <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
         <Param name="name" updates="None" val="uncertainty_memory_q_response" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
@@ -4665,24 +4423,6 @@
         <Param name="ticks" updates="constant" val="(1,2,3,4,5,6)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </SliderComponent>
-      <MouseComponent name="mouse_lowconf_5">
-        <Param name="clickable" updates="constant" val="lowconf_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_lowconf_5" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
       <TextComponent name="instructions3_5">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -4719,7 +4459,113 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.2" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Memory_or_Money__12_Pt">
+      <TextComponent name="mem_or_money_q">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="num"/>
+        <Param name="name" updates="None" val="mem_or_money_q" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, .3)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Would you say overall that your choices were based on your memory or the money?" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="1.2" valType="num"/>
+      </TextComponent>
+      <SliderComponent name="mem_or_money_binary_response">
+        <Param name="borderColor" updates="constant" val="White" valType="color"/>
+        <Param name="color" updates="constant" val="LightGray" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="Red" valType="color"/>
+        <Param name="flip" updates="constant" val="False" valType="bool"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
+        <Param name="granularity" updates="constant" val=".1" valType="num"/>
+        <Param name="initVal" updates="None" val="6.5" valType="code"/>
+        <Param name="labels" updates="constant" val="&quot;memory&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;money&quot;" valType="list"/>
+        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
+        <Param name="name" updates="None" val="mem_or_money_binary_response" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="readOnly" updates="constant" val="False" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(1.0, 0.03)" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="styleTweaks" updates="constant" val="('triangleMarker',)" valType="list"/>
+        <Param name="styles" updates="constant" val="rating" valType="str"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="ticks" updates="constant" val="(1,2,3,4,5,6,7,8,9,10,11,12)" valType="list"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </SliderComponent>
+      <TextComponent name="instructions3_6">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="num"/>
+        <Param name="name" updates="None" val="instructions3_6" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, -.3)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Using the mouse, click on the line above to give your answer. A red triangle should appear to indicate your choice. Then press the ‘c’ key to continue." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_27">
+        <Param name="allowedKeys" updates="constant" val="'c','C'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_27" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -4825,8 +4671,8 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ButtonComponent>
     </Routine>
-    <Routine name="Memory_or_Money__12_Pt">
-      <TextComponent name="mem_or_money_q">
+    <Routine name="Task_Feedback">
+      <TextComponent name="task_feedback_question">
         <Param name="color" updates="constant" val="white" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="contrast" updates="constant" val="1" valType="num"/>
@@ -4836,10 +4682,10 @@
         <Param name="font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.04" valType="num"/>
-        <Param name="name" updates="None" val="mem_or_money_q" valType="code"/>
+        <Param name="name" updates="None" val="task_feedback_question" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0, .3)" valType="list"/>
+        <Param name="pos" updates="constant" val="(0, 0.3)" valType="list"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -4847,107 +4693,81 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Would you say overall that your choices were based on your memory or the money?" valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="1.2" valType="num"/>
-      </TextComponent>
-      <SliderComponent name="mem_or_money_binary_response">
-        <Param name="borderColor" updates="constant" val="White" valType="color"/>
-        <Param name="color" updates="constant" val="LightGray" valType="color"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="Red" valType="color"/>
-        <Param name="flip" updates="constant" val="False" valType="bool"/>
-        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
-        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
-        <Param name="granularity" updates="constant" val=".1" valType="num"/>
-        <Param name="initVal" updates="None" val="6.5" valType="code"/>
-        <Param name="labels" updates="constant" val="&quot;memory&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;money&quot;" valType="list"/>
-        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
-        <Param name="name" updates="None" val="mem_or_money_binary_response" valType="code"/>
-        <Param name="opacity" updates="constant" val="" valType="num"/>
-        <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
-        <Param name="readOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1.0, 0.03)" valType="list"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="condition" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
-        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
-        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
-        <Param name="styleTweaks" updates="constant" val="('triangleMarker',)" valType="list"/>
-        <Param name="styles" updates="constant" val="rating" valType="str"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="ticks" updates="constant" val="(1,2,3,4,5,6,7,8,9,10,11,12)" valType="list"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </SliderComponent>
-      <MouseComponent name="mouse_lowconf_6">
-        <Param name="clickable" updates="constant" val="lowconf_slider" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
-        <Param name="name" updates="None" val="mouse_lowconf_6" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="False" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
-      </MouseComponent>
-      <TextComponent name="instructions3_6">
-        <Param name="color" updates="constant" val="white" valType="color"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="None" valType="str"/>
-        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.04" valType="num"/>
-        <Param name="name" updates="None" val="instructions3_6" valType="code"/>
-        <Param name="opacity" updates="constant" val="" valType="num"/>
-        <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0, -.3)" valType="list"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Using the mouse, click on the line above to give your answer. A red triangle should appear to indicate your choice. Then press the ‘c’ key to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Task Feedback&amp;#10;&amp;#10;Do you have any feedback or comments about the task?" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="num"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_27">
-        <Param name="allowedKeys" updates="constant" val="'c','C'" valType="list"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <TextboxComponent name="task_feedback_response">
+        <Param name="anchor" updates="constant" val="center" valType="str"/>
+        <Param name="autoLog" updates="constant" val="True" valType="bool"/>
+        <Param name="bold" updates="constant" val="False" valType="bool"/>
+        <Param name="borderColor" updates="constant" val="None" valType="color"/>
+        <Param name="borderWidth" updates="constant" val="2" valType="num"/>
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_27" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="editable" updates="constant" val="True" valType="bool"/>
+        <Param name="fillColor" updates="constant" val="white" valType="color"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="italic" updates="constant" val="False" valType="bool"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
+        <Param name="lineSpacing" updates="constant" val="1.0" valType="num"/>
+        <Param name="name" updates="None" val="task_feedback_response" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="padding" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(1.0, 0.09)" valType="list"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.2" valType="code"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Please type your response here . . . " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </TextboxComponent>
+      <ButtonComponent name="task_feedback_button">
+        <Param name="anchor" updates="constant" val="center" valType="str"/>
+        <Param name="bold" updates="constant" val="True" valType="bool"/>
+        <Param name="borderColor" updates="constant" val="None" valType="color"/>
+        <Param name="borderWidth" updates="constant" val="0" valType="num"/>
+        <Param name="callback" updates="constant" val="" valType="extendedCode"/>
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="darkgrey" valType="color"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="italic" updates="constant" val="False" valType="bool"/>
+        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
+        <Param name="name" updates="None" val="task_feedback_button" valType="code"/>
+        <Param name="oncePerClick" updates="constant" val="True" valType="bool"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="padding" updates="constant" val="" valType="num"/>
+        <Param name="pos" updates="constant" val="(0.6, -0.3)" valType="list"/>
+        <Param name="save" updates="None" val="every click" valType="str"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="When finished, click here to go to the next question. " valType="str"/>
+        <Param name="timeRelativeTo" updates="constant" val="button onset" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ButtonComponent>
     </Routine>
   </Routines>
   <Flow>
