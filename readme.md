@@ -1,4 +1,4 @@
-# MeMoS Study (Memory, Money, & Self)
+# Memory, Money, and Self (MeMoS) Study
 
 Welcome to the MeMoS Study repository! This repository contains materials and documentation related to the MeMoS Study, which investigates the impact of intrinsic and extrinsic motivation on decision strategies in memory-based tasks.
 
